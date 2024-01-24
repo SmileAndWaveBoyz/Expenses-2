@@ -18,7 +18,7 @@ function Invoices() {
 
     const fetchInvoices = async () => {
       try {
-        const response = await fetch('http://192.168.1.96:8000/api/invoices', {
+        const response = await fetch('https://expenses-2-production.up.railway.app/api/invoices', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ function Invoices() {
 
     const fetchItems = async () => {
       try {
-        const response = await fetch('http://192.168.1.96:8000/api/items', {
+        const response = await fetch('https://expenses-2-production.up.railway.app/api/items', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ function Invoices() {
 
   async function deleteInvoice(invoiceId) {
     try {
-      const response = await fetch(`http://192.168.1.96:8000/api/invoices/${invoiceId}`, {
+      const response = await fetch(`https://expenses-2-production.up.railway.app/api/invoices/${invoiceId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -179,7 +179,7 @@ function Invoices() {
                         <div className="invoices_dateContainer">
                             <p className='invoices__date due'>Due</p> <p className='invoices__date'> {d.paymentDue}</p> 
                         </div>
-                        <h3 className='invoices__id'>£ {(d.total) ? d.total.toFixed(2): "Null"}</h3>
+                        <h3 className='invoices__id'>£ {(d.total) ? d.total: "Null"}</h3>
                       </div>
 
                       <div className="invoices_right">

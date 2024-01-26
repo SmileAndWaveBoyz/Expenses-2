@@ -159,6 +159,27 @@ function Invoices() {
     });
   }  
   
+
+  function markAsPending(){
+
+    const payload = {
+      status: "pending",
+  };
+
+    axiosClient.put(`/markAsPaid/${data[selectedID].id}`, payload)
+    .then(({ data }) => {
+        console.log(data);
+        if (!refresh) {
+            setRefresh(true);
+        } else {
+            setRefresh(false);
+        }
+    })
+    .catch((error) => {
+        alert(error)
+    });
+  }  
+  
   return (
     <div className='home'>
       <div className="clearBox" onClick={clearBoxClick} style={{display: listDisplay}}></div>
@@ -216,7 +237,16 @@ function Invoices() {
             <div className="editPage__headerButtons">
               <button className='btn btn-transparent edit' onClick={() => setUpdateForm(true)}>Edit</button>
               <button className='btn btn-red delete' onClick={() => deleteInvoice(data[selectedID].id)}>Delete</button>
-              <button className='btn btn-primary paid' onClick={() => markAsPaid()}>Mark as Paid</button>
+              {
+                (data[selectedID].status === "pending") ?
+                <button className='btn btn-primary paid' onClick={() => markAsPaid()}>Mark as Paid</button>
+                :
+                (data[selectedID].status === "paid") ?
+                <button className='btn btn-red paid' onClick={() => markAsPending()}>Mark as Pending</button>
+                :
+                null
+              }
+
             </div>
           </header>
           :
@@ -309,7 +339,15 @@ function Invoices() {
             <div className="container eFooter">
             <button className='btn btn-transparent edit' onClick={() => setUpdateForm(true)}>Edit</button>
             <button className='btn btn-red delete' onClick={() => deleteInvoice(data[selectedID].id)}>Delete</button>
-            <button className='btn btn-primary paid' onClick={() => markAsPaid()}>Mark as Paid</button>
+              {
+                (data[selectedID].status === "pending") ?
+                <button className='btn btn-primary paid' onClick={() => markAsPaid()}>Mark as Paid</button>
+                :
+                (data[selectedID].status === "paid") ?
+                <button className='btn btn-red paid' onClick={() => markAsPending()}>Mark as Pending</button>
+                :
+                null
+              }
             </div>
           </footer>
         </div>

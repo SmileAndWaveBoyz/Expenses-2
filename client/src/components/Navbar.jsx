@@ -18,11 +18,10 @@ function Navbar() {
 
   function theme() {
     setDarkMode(!darkMode)
-
     if (darkMode) {
-      document.documentElement.style.setProperty('--primary-color', '#ffffff'); // Change to your dark color
+      document.documentElement.style.setProperty('--white', '#ffffff');
     } else {
-      document.documentElement.style.setProperty('--primary-color', '#000000'); // Change to your light color
+      document.documentElement.style.setProperty('--white', '#000000');
     }
   }
 

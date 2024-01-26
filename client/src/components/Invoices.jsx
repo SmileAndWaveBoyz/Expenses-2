@@ -335,7 +335,9 @@ function Invoices() {
           null
           }
 
-          <footer className='editPage__footer '>
+          {
+            (data.length > 0) ?
+            <footer className='editPage__footer '>
             <div className="container eFooter">
             <button className='btn btn-transparent edit' onClick={() => setUpdateForm(true)}>Edit</button>
             <button className='btn btn-red delete' onClick={() => deleteInvoice(data[selectedID].id)}>Delete</button>
@@ -350,6 +352,9 @@ function Invoices() {
               }
             </div>
           </footer>
+          :
+           <p>Loading...</p>   
+          }
         </div>
       </div>
   </div>

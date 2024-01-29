@@ -19,9 +19,19 @@ function Navbar() {
   function theme() {
     setDarkMode(!darkMode)
     if (darkMode) {
-      document.documentElement.style.setProperty('--white', '#ffffff');
+      document.documentElement.style.setProperty('--white', '#f8f8f8');
+      document.documentElement.style.setProperty('--invoice', '#FFF');
+      document.documentElement.style.setProperty('--black4', '#0C0E16');
+      document.documentElement.style.setProperty('--grey3', '#888EB0');
+      document.documentElement.style.setProperty('--itemContainer', '#F9FAFE');
+      document.documentElement.style.setProperty('--totalContainer', ' #373B53');
     } else {
-      document.documentElement.style.setProperty('--white', '#000000');
+      document.documentElement.style.setProperty('--white', '#141625');
+      document.documentElement.style.setProperty('--invoice', '#1E2139');
+      document.documentElement.style.setProperty('--black4', '#FFF');
+      document.documentElement.style.setProperty('--grey3', '#DFE3FA');
+      document.documentElement.style.setProperty('--itemContainer', '#252945');
+      document.documentElement.style.setProperty('--totalContainer', ' #0C0E16');
     }
   }
 

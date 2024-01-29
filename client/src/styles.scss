@@ -22,6 +22,8 @@ $black4: rgb(12, 14, 22);
     --red1: rgb(236, 87, 87);
     --red2: rgb(255, 151, 151);
     --white: rgb(248, 248, 251);
+    --itemContainer: #F9FAFE;
+    --invoice: rbg(255, 255, 255);
     --grey1: rgb(223, 227, 250);
     --grey2: rgb(126, 136, 195);
     --grey3: rgb(136, 142, 176);
@@ -29,6 +31,7 @@ $black4: rgb(12, 14, 22);
     --black2: rgb(30, 33, 57);
     --black3: rgb(20, 22, 37);
     --black4: rgb(12, 14, 22);
+    --totalContainer: #373B53;
   }
   
 
@@ -42,7 +45,7 @@ body{
 }
 
 h1{
-    color: $black4;
+    color: var(--black4);
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: -0.04688rem;
@@ -51,7 +54,7 @@ h1{
 }
 
 h3{
-    color: $grey3;
+    color: var(--grey3);
     font-size: 0.8125rem;
     font-weight: 500;
     line-height: 0.9375rem; /* 115.385% */
@@ -110,7 +113,7 @@ button{
 
 .btn-primary{
     background-color: $blue1;
-    color: #FFF;
+    color: var(--invoice);
     text-align: center;
     font-size: 0.9375rem;
     font-style: normal;
@@ -125,7 +128,7 @@ button{
 
 .btn-red{
     background-color: $red1;
-    color: #FFF;
+    color: var(--invoice);
     font-size: 0.9375rem;
     font-weight: 700;
     line-height: 0.9375rem; /* 100% */
@@ -289,7 +292,7 @@ button{
 .form-select{
     border: 0;
     outline: 0;
-    color: $black4;
+    color: var(--black4);
     text-align: right;
     font-family: League Spartan;
     font-size: 0.9375rem;
@@ -332,7 +335,7 @@ button{
 }
 
 .header__filterPar{
-    color: var(--08, $black4);
+    color: var(--black4);
     font-size: 0.9375rem;
     font-weight: 700;
     line-height: 0.9375rem; /* 100% */
@@ -354,7 +357,7 @@ button{
     justify-content: center;
     align-items: center;
     border-radius: 0.5rem;
-    background: #FFF;
+    background: var(--invoice);
     box-shadow: 0px 10px 20px 0px rgba(72, 84, 159, 0.25);
     padding: 1.5rem;
     padding-bottom: 0.1rem;
@@ -422,7 +425,7 @@ button{
 }
 .invoices__row{
     border-radius: 0.5rem;
-    background: #FFF;
+    background: var(--invoice);
     box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.10);
     padding: 1.56rem 1.5rem 1.38rem 1.5rem;
     display: flex;
@@ -435,7 +438,7 @@ button{
 }
 
 .invoices__id{
-    color: $black4;
+    color: var(--black4);
     font-family: League Spartan;
     font-size: 0.9375rem;
     font-style: normal;
@@ -446,7 +449,7 @@ button{
 }
 
 .invoices__idH{
-    color: $grey2;
+    color: var(--grey2);
     font-family: League Spartan;
     font-size: 0.9375rem;
     font-style: normal;
@@ -461,7 +464,7 @@ button{
 }
 
 .invoices__date{
-    color: $grey2;
+    color: var(--grey2);
     font-family: League Spartan;
     font-size: 0.8125rem;
     font-style: normal;
@@ -476,7 +479,7 @@ button{
 }
 
 .invoices__name{
-    color: $grey2;
+    color: var(--grey2);
     text-align: right;
     font-family: League Spartan;
     font-size: 0.8125rem;
@@ -628,7 +631,7 @@ button{
 }
 
 .empty__heading{
-    color: $black4;
+    color: var(--black4);
     font-size: 1.5rem;
     font-weight: 700;
     line-height: normal;
@@ -695,7 +698,7 @@ button{
 }
 
 .nForm__backButton{
-    color: $black4;
+    color: var(--black4);
     font-size: 0.9375rem;
     font-weight: 700;
     line-height: 0.9375rem; /* 100% */
@@ -735,7 +738,7 @@ button{
 
 .form-group{
     label{
-        color: $grey2;
+        color: var(--grey2);
         font-size: 0.8125rem;;
         font-weight: 500;
         line-height: 0.9375rem; /* 115.385% */
@@ -809,7 +812,7 @@ input[type="date"]:before {
   }
 
 .nForm__addButton{
-    color: $grey2;
+    color: var(--grey2);
     text-align: center;
     font-family: League Spartan;
     font-size: 0.9375rem;
@@ -905,7 +908,7 @@ input[type="date"]:before {
 
 .editPage__header{
     border-radius: 0.5rem;
-    background: #FFF;
+    background: var(--invoice);
     box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.10);
     padding: 1.5rem;
     height: 5.6875rem;
@@ -926,7 +929,7 @@ input[type="date"]:before {
 
 .editPage__body{
     border-radius: 0.5rem;
-    background: #FFF;
+    background: var(--invoice);
     box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.10);
     height: 43.4375rem;
     padding: 1.5rem;
@@ -935,7 +938,7 @@ input[type="date"]:before {
 }
 
 .editPage__id{
-    color: $black4;
+    color: var(--black4);
     font-size: 0.9375rem;
     font-weight: 700;
     line-height: 0.9375rem;
@@ -944,7 +947,7 @@ input[type="date"]:before {
 }
 
 .editPage__description{
-    color: $grey2;
+    color: var(--grey2);
     font-size: 0.8125rem;
     font-weight: 500;
     line-height: 0.9375rem; /* 115.385% */
@@ -957,7 +960,7 @@ input[type="date"]:before {
 }
 
 .editPage__addressPar{
-    color: $grey2;
+    color: var(--grey2);
     font-size: 0.8125rem;
     font-weight: 500;
     line-height: 1.125rem; /* 138.462% */
@@ -966,7 +969,7 @@ input[type="date"]:before {
 }
 
 .editPage__infoHeading{
-    color: $grey2;
+    color: var(--grey2);
     font-size: 0.8125rem;
     font-style: normal;
     line-height: 0.9375rem; /* 115.385% */
@@ -981,7 +984,7 @@ input[type="date"]:before {
 }
 
 .editPage__dateHeading{
-    color: $black4;
+    color: var(--black4);
     font-size: 0.9375rem;
     font-weight: 700;
     line-height: 1.25rem; /* 133.333% */
@@ -1010,7 +1013,7 @@ input[type="date"]:before {
     padding: 1.5rem 1.5rem 1.44rem 1.5rem;
     padding-bottom: 0.01rem;
     border-radius: 0.5rem 0.5rem 0rem 0rem;
-    background: #F9FAFE;
+    background: var(--itemContainer);
 }
 
 .editPage__quantityContainer{
@@ -1021,7 +1024,7 @@ input[type="date"]:before {
 }
 
 .editPage__quantityHeading{
-    color: $black4;
+    color: var(--black4);
     font-size: 0.9375rem;
     font-weight: 700;
     line-height: 0.9375rem; /* 100% */
@@ -1030,7 +1033,7 @@ input[type="date"]:before {
 }
 
 .editPage_quantityPar{
-    color: $grey2;
+    color: var(--grey2);
     font-size: 0.9375rem;
     font-weight: 700;
     line-height: 0.9375rem; /* 100% */
@@ -1039,7 +1042,7 @@ input[type="date"]:before {
 }
 
 .editPage__quantityContainerAmount{
-    color: $black4;
+    color: var(--black4);
     font-size: 0.9375rem;
     font-weight: 700;
     line-height: 0.9375rem; /* 100% */
@@ -1049,7 +1052,7 @@ input[type="date"]:before {
 
 .editPage__totalContainer{
     border-radius: 0rem 0rem 0.5rem 0.5rem;
-    background: #373B53;
+    background: var(--totalContainer);
     height: 5rem;
     padding: 2rem 1.5rem 1.88rem 1.5rem;
     display: flex;
@@ -1058,7 +1061,7 @@ input[type="date"]:before {
 }
 
 .editPage__totalHeading{
-    color: #FFF;
+    color: var(--invoice);
     font-size: 0.8125rem;
     font-weight: 500;
     line-height: 1.125rem; /* 138.462% */
@@ -1067,7 +1070,7 @@ input[type="date"]:before {
 }
 
 .editPage__totalAmount{
-    color: #FFF;
+    color: var(--invoice);
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
@@ -1077,7 +1080,7 @@ input[type="date"]:before {
 }
 
 .editPage__footer{
-    background: #FFF;
+    background: var(--invoice);
     box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.10);
     height: 5.6875rem;
     width: 100vw;

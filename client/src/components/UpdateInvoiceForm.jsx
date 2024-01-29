@@ -439,7 +439,7 @@ function UpdateInvoiceForm(props) {
             </div>
             <div className="nForm__rectangle"> </div>
             <div className="nForm__Padding nForm_row container">
-                <button className='btn btn-transparent nForm__discardButton '>Discard</button>
+                <button className='btn btn-transparent nForm__discardButton ' onClick={goBack}>Discard</button>
                 <button className='btn btn-dark nForm__saveButton ' onClick={draft}>Save as Draft</button>
                 <button className='btn btn-primary nForm__sendButton' onClick={onSubmit}>Save & Send</button>
             </div>

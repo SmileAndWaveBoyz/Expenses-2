@@ -70,6 +70,9 @@ function Login() {
           </div>
         </form>
       </div>
+      <div className="row justify-content-center">
+            <p>This is a test website, please login with test@test.com Laravel1!, or create an account.</p> 
+      </div>
     </div>
   )
 }

@@ -18,6 +18,8 @@
   --black3: rgb(20, 22, 37);
   --black4: rgb(12, 14, 22);
   --totalContainer: #373B53;
+  --transparent: rgb(0, 0, 0, 0.1);
+  --transparentHover: rgb(0, 0, 0, 0.2) ;
 }
 
 html {
@@ -45,6 +47,15 @@ h3 {
   line-height: 0.9375rem; /* 115.385% */
   letter-spacing: -0.00625rem;
   margin: 0;
+}
+
+.form-control {
+  background-color: var(--invoice);
+  color: var(--black4);
+}
+.form-control:focus {
+  background-color: var(--invoice);
+  color: var(--black4);
 }
 
 @media screen and (min-width: 768px) {
@@ -95,7 +106,7 @@ button:focus {
 
 .btn-primary {
   background-color: rgb(124, 93, 250);
-  color: var(--invoice);
+  color: #fff;
   text-align: center;
   font-size: 0.9375rem;
   font-style: normal;
@@ -109,7 +120,7 @@ button:focus {
 
 .btn-red {
   background-color: rgb(236, 87, 87);
-  color: var(--invoice);
+  color: #fff;
   font-size: 0.9375rem;
   font-weight: 700;
   line-height: 0.9375rem; /* 100% */
@@ -120,7 +131,7 @@ button:focus {
 }
 
 .btn-transparent {
-  background: rgba(0, 0, 0, 0.1);
+  background: var(--transparent);
   color: rgb(126, 136, 195);
   font-size: 0.9375rem;
   font-weight: 700;
@@ -128,7 +139,7 @@ button:focus {
   letter-spacing: -0.01563rem;
 }
 .btn-transparent:hover {
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--transparentHover);
 }
 
 .btn-dark {
@@ -330,6 +341,7 @@ button:focus {
   font-weight: 700;
   line-height: 0.9375rem; /* 100% */
   letter-spacing: -0.01563rem;
+  color: var(--black4);
 }
 
 @media screen and (min-width: 768px) {
@@ -972,7 +984,7 @@ input[type=date]:focus:before {
 }
 
 .editPage__totalHeading {
-  color: var(--invoice);
+  color: #FFF;
   font-size: 0.8125rem;
   font-weight: 500;
   line-height: 1.125rem; /* 138.462% */
@@ -981,7 +993,7 @@ input[type=date]:focus:before {
 }
 
 .editPage__totalAmount {
-  color: var(--invoice);
+  color: #FFF;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;

@@ -22,16 +22,22 @@ function Navbar() {
       document.documentElement.style.setProperty('--white', '#f8f8f8');
       document.documentElement.style.setProperty('--invoice', '#FFF');
       document.documentElement.style.setProperty('--black4', '#0C0E16');
+      document.documentElement.style.setProperty('--black', '#000000');
       document.documentElement.style.setProperty('--grey3', '#888EB0');
       document.documentElement.style.setProperty('--itemContainer', '#F9FAFE');
       document.documentElement.style.setProperty('--totalContainer', ' #373B53');
+      document.documentElement.style.setProperty('--transparent', ' rgb(0, 0, 0, 0.1)');
+      document.documentElement.style.setProperty('--transparentHover', ' rgb(0, 0, 0, 0.2)');
     } else {
       document.documentElement.style.setProperty('--white', '#141625');
       document.documentElement.style.setProperty('--invoice', '#1E2139');
       document.documentElement.style.setProperty('--black4', '#FFF');
+      document.documentElement.style.setProperty('--black', '#FFF');
       document.documentElement.style.setProperty('--grey3', '#DFE3FA');
       document.documentElement.style.setProperty('--itemContainer', '#252945');
       document.documentElement.style.setProperty('--totalContainer', ' #0C0E16');
+      document.documentElement.style.setProperty('--transparent', ' rgb(255, 255, 255, 0.1)');
+      document.documentElement.style.setProperty('--transparentHover', ' rgb(255, 255, 255, 0.2)');
     }
   }
 

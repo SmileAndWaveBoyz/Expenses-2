@@ -32,6 +32,8 @@ $black4: rgb(12, 14, 22);
     --black3: rgb(20, 22, 37);
     --black4: rgb(12, 14, 22);
     --totalContainer: #373B53;
+    --transparent: rgb(0, 0, 0, 0.1);
+    --transparentHover: rgb(0, 0, 0, 0.2)
   }
   
 
@@ -61,6 +63,16 @@ h3{
     letter-spacing: -0.00625rem;
     margin: 0;
 }
+
+.form-control{
+    background-color: var(--invoice);
+    color: var(--black4);
+    &:focus{
+        background-color: var(--invoice);
+        color: var(--black4);
+    }
+}
+
 
 
 @media screen and (min-width: 768px) {
@@ -113,7 +125,7 @@ button{
 
 .btn-primary{
     background-color: $blue1;
-    color: var(--invoice);
+    color: #fff;
     text-align: center;
     font-size: 0.9375rem;
     font-style: normal;
@@ -128,7 +140,7 @@ button{
 
 .btn-red{
     background-color: $red1;
-    color: var(--invoice);
+    color: #fff;
     font-size: 0.9375rem;
     font-weight: 700;
     line-height: 0.9375rem; /* 100% */
@@ -140,7 +152,7 @@ button{
 }
 
 .btn-transparent{
-    background: rgb(0, 0, 0, 0.1);
+    background: var(--transparent);
     color: $grey2;
     font-size: 0.9375rem;
     font-weight: 700;
@@ -148,7 +160,7 @@ button{
     letter-spacing: -0.01563rem;
 
     &:hover {
-        background: rgb(0, 0, 0, 0.2);
+        background: var(--transparentHover);
     }
 }
 
@@ -373,6 +385,7 @@ button{
     font-weight: 700;
     line-height: 0.9375rem; /* 100% */
     letter-spacing: -0.01563rem;
+    color: var(--black4);
 }
 
 @media screen and (min-width: 768px) {
@@ -1061,7 +1074,7 @@ input[type="date"]:before {
 }
 
 .editPage__totalHeading{
-    color: var(--invoice);
+    color: #FFF;
     font-size: 0.8125rem;
     font-weight: 500;
     line-height: 1.125rem; /* 138.462% */
@@ -1070,7 +1083,7 @@ input[type="date"]:before {
 }
 
 .editPage__totalAmount{
-    color: var(--invoice);
+    color: #FFF;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;

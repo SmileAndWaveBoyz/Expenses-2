@@ -21,7 +21,7 @@ function UpdateInvoiceForm(props) {
     const projectDescriptionRef = useRef(null)
     
 
-    const { updateForm, setUpdateForm, refresh, setRefresh, setSelectedData, selectedData, selectedItems} = useStateContext()
+    const { updateForm, setUpdateForm, refresh, setRefresh, selectedData, selectedItems} = useStateContext()
     const [newFormPosition, setNewFormPosition] = useState(window.innerWidth)  
 
     const [items, setItems] = useState([
@@ -67,22 +67,22 @@ function UpdateInvoiceForm(props) {
           }
       }
 
-      
-      
-
-        clientAddressCityRef.current.value = selectedData.clientAddress_city
-        clientAddressCountryRef.current.value = selectedData.clientAddress_country
-        clientAddressPostCodeRef.current.value = selectedData.clientAddress_postCode
-        clientAddressStreetRef.current.value = selectedData.clientAddress_street
-        clientsEmailRef.current.value = selectedData.clientEmail
-        clientsNameRef.current.value = selectedData.clientName
-        invoiceDateRef.current.value = selectedData.createdAt
-        projectDescriptionRef.current.value = selectedData.description
-        paymentTermsRef.current.value = selectedData.paymentTerms
-        senderAddressCityRef.current.value = selectedData.senderAddress_city
-        senderAddressCountryRef.current.value = selectedData.senderAddress_country
-        senderAddressPostCodeRef.current.value = selectedData.senderAddress_postCode
-        senderAddressStreetRef.current.value = selectedData.senderAddress_street
+      if (selectedData) {
+        
+          clientAddressCityRef.current.value = selectedData.clientAddress_city
+          clientAddressCountryRef.current.value = selectedData.clientAddress_country
+          clientAddressPostCodeRef.current.value = selectedData.clientAddress_postCode
+          clientAddressStreetRef.current.value = selectedData.clientAddress_street
+          clientsEmailRef.current.value = selectedData.clientEmail
+          clientsNameRef.current.value = selectedData.clientName
+          invoiceDateRef.current.value = selectedData.createdAt
+          projectDescriptionRef.current.value = selectedData.description
+          paymentTermsRef.current.value = selectedData.paymentTerms
+          senderAddressCityRef.current.value = selectedData.senderAddress_city
+          senderAddressCountryRef.current.value = selectedData.senderAddress_country
+          senderAddressPostCodeRef.current.value = selectedData.senderAddress_postCode
+          senderAddressStreetRef.current.value = selectedData.senderAddress_street
+      }
 
       setItems(selectedItems)
     

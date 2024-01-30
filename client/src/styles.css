@@ -225,6 +225,7 @@ button:focus {
   height: 100%;
   border-left: 2px solid #494E6E;
   padding: 1.25rem 1.5rem;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

@@ -203,6 +203,7 @@ button{
 }
 
 .navigationBar__profileBox{
+    background-color: var(--invoice);
     position: absolute;
     bottom: -18rem;
     right: 1rem;
@@ -213,7 +214,6 @@ button{
     align-items: center;
     justify-content: center;
     width: 12rem;
-    background-color: var(--invoice);
 }
 
 .navigationBar__profileAvatar{
@@ -283,7 +283,7 @@ button{
         align-items: center;
         justify-content: center;
         width: 12rem;
-        background-color: var(--invoice);
+
     }
     
     .blackBoxProfile{

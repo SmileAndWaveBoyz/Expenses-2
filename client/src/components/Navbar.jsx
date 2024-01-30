@@ -56,7 +56,7 @@ function Navbar() {
             <button className='navigationBar__avatarButton' onClick={profileClick}><img className='navigationBar__avatar' src="../assets/image-avatar.jpg" alt="Profile Picture" /></button>
         </span>
           <div className="blackBoxProfile" onClick={profileClick} style={{display: profileBox ? "block" : "none"}}></div>
-        <div className="navigationBar__profileBox border rounded" style={{display: profileBox ? "flex" : "none"}}>
+        <div className="navigationBar__profileBox border rounded" style={{display: profileBox ? "flex" : "none", background: darkMode ? "black"  :"white"}}>
           <img className='navigationBar__profileAvatar' src="../assets/image-avatar.jpg" alt="Profile Picture" />
           <p className='navigationBar__profileName'>{user.name} {user.surname}</p>
           <button className='navigationBar__logOutButton btn btn-primary' onClick={onLogout}>Log out</button>

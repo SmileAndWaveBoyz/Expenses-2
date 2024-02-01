@@ -21,7 +21,7 @@ function Navbar() {
     setDarkMode(!darkMode)
     if (darkMode) {
       document.documentElement.style.setProperty('--white', '#f8f8f8');
-      document.documentElement.style.setProperty('--invoice', '#FFF');
+      document.documentElement.style.setProperty('--invoice', '#FFFFFF');
       document.documentElement.style.setProperty('--black4', '#0C0E16');
       document.documentElement.style.setProperty('--black', '#000000');
       document.documentElement.style.setProperty('--grey3', '#888EB0');

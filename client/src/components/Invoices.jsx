@@ -98,8 +98,10 @@ function Invoices() {
         }
     }
 
-    setSelectedData(data[selectedID])
-    console.log("Selected", data[selectedID]);
+    if (data[selectedID]) {
+      setSelectedData(data[selectedID]);
+    }
+    
   
     return () => {
       window.removeEventListener('resize', handleResize)
@@ -119,7 +121,7 @@ function Invoices() {
           selectedItemsVar.push(itemData[i])
         }
     }
-    // console.log(selectedItemsVar);
+    
     setSelectedItems(selectedItemsVar)
   }
 

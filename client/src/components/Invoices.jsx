@@ -112,6 +112,7 @@ function Invoices() {
   function viewInvoice(id) {
     setSelectedID(id)
     setEditPage(true)
+    console.log(selectedID);
 
     let selectedItemsVar = []
 
@@ -213,7 +214,7 @@ function Invoices() {
                     </section>
                 </div>
                 :
-                null
+                <p>Loading...</p>   
 
                 )
         })
@@ -246,7 +247,7 @@ function Invoices() {
                 (data[selectedID].status === "paid") ?
                 <button className='btn btn-red paid' onClick={() => markAsPending()}>Mark as Pending</button>
                 :
-                null
+                null  
               }
 
             </div>
@@ -262,7 +263,7 @@ function Invoices() {
             <div className="editPage__top">
               <div className="editPage__idContainer">
                 <h3 className='editPage__id'><h3 className='invoices__idH'>#</h3>{data[selectedID].invoiceID}</h3>
-                <p className='editPage__description'>Graphic Design</p>
+                <p className='editPage__description'>{data[selectedID].description}</p>
               </div>
               <div className="editPage__addressContainer">
                 <p className='editPage__addressPar'>{data[selectedID].senderAddress_street}</p>
@@ -330,11 +331,11 @@ function Invoices() {
               </div>
             </div>
             :
-            null
+            <p>Loading...</p>   
             }
           </div>
           :
-          null
+          <p>Loading...</p>   
           }
 
           {

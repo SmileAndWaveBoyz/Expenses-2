@@ -74,7 +74,7 @@ function Invoices() {
         throw new Error(`Error: ${response.status}`);
       }
   
-      
+      setSelectedID(0)
       setRefresh(!refresh);
       setEditPage(false);
   
@@ -259,7 +259,7 @@ function Invoices() {
           }
 
           {
-            (data.length > 0) ?
+            (data.length > 0 && data[selectedID]) ?
 
             <div className="editPage__body" >
             <div className="editPage__top">

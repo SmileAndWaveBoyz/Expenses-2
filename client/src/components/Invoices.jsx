@@ -11,11 +11,10 @@ function Invoices() {
   const [selectedID, setSelectedID] = useState(0)
 
 
-  const [data, setData] = useState([])
+  const [data, setData] = useState([{clientAddress_city: "bristol"}])
   const [itemData, setItemData] = useState([])
   useEffect(() => {
     
-
     const fetchInvoices = async () => {
       try {
         const response = await fetch('https://expenses-2-production.up.railway.app/api/invoices', {
@@ -29,13 +28,13 @@ function Invoices() {
 
         const data = await response.json();
         setData(data.invoices)
+        console.log(data);
 
       } catch (error) {
         console.error('Error fetching invoices:', error.message);
       }
     };
 
-    fetchInvoices()
 
     const fetchItems = async () => {
       try {
@@ -56,6 +55,7 @@ function Invoices() {
     };
 
     fetchItems()
+    fetchInvoices()
 
   }, [refresh]);
 
@@ -68,18 +68,21 @@ function Invoices() {
           'Authorization': `Bearer ${token}`,
         },
       });
-
-      if (refresh) {
-        setRefresh(false)
-      } else{
-        setRefresh(true)
+  
+      // Check if the request was successful (status code 2xx)
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status}`);
       }
-      setEditPage(false)
-
+  
+      // Update refresh only after the fetch operation is complete
+      setRefresh(!refresh);
+      setEditPage(false);
+  
     } catch (error) {
-       alert(error)
+      alert(error);
     }
   }
+  
 
   useEffect(() => {
 
@@ -214,7 +217,7 @@ function Invoices() {
                     </section>
                 </div>
                 :
-                <p>Loading...</p>   
+                <div class="lds-hourglass"></div>  
 
                 )
         })

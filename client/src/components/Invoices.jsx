@@ -74,7 +74,7 @@ function Invoices() {
         throw new Error(`Error: ${response.status}`);
       }
   
-      // Update refresh only after the fetch operation is complete
+      
       setRefresh(!refresh);
       setEditPage(false);
   
@@ -115,15 +115,14 @@ function Invoices() {
   function viewInvoice(id) {
     setSelectedID(id)
     setEditPage(true)
-    console.log(selectedID);
 
     let selectedItemsVar = []
 
     for (let i = 0; i < itemData.length; i++) {
 
-        if (data[id].id === itemData[i].invoice_id) {
-          selectedItemsVar.push(itemData[i])
-        }
+      if (data[id] && data[id].id === itemData[i].invoice_id) {
+        selectedItemsVar.push(itemData[i]);
+      }
     }
     
     setSelectedItems(selectedItemsVar)
@@ -235,7 +234,7 @@ function Invoices() {
         <div className="container">
           <button onClick={viewInvoiceBack} className='nForm__backButton edit'><svg className='nForm__backButtonSVG'  width="6" height="11" viewBox="0 0 6 11" fill="none">  <path d="M4.3418 0.88623L0.113895 5.11413L4.3418 9.34203" stroke="#9277FF" stroke-width="2"/></svg>Go back</button>
         {
-          (data.length > 0) ?
+          (data.length > 0 && data[selectedID]) ?
 
           <header className='editPage__header'>
             <p className='editPage__status'>Status</p>

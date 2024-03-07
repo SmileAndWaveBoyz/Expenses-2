@@ -59,7 +59,11 @@ export const ContextProvider = ({children})=>{
         }
       }
 
-    return  <StateContext.Provider value={{filters, setFilters, selectedItems, setSelectedItems, selectedData, setSelectedData, updateForm, setUpdateForm, arrowRotate, setArrowRotate, user, token, newForm, refresh, editPage, listDisplay, setUser, setToken, setNewForm, setRefresh, setEditPage, setListDisplay}}>{children}</StateContext.Provider>
+    return  (
+        <StateContext.Provider value={{filters, setFilters, selectedItems, setSelectedItems, selectedData, setSelectedData, updateForm, setUpdateForm, arrowRotate, setArrowRotate, user, token, newForm, refresh, editPage, listDisplay, setUser, setToken, setNewForm, setRefresh, setEditPage, setListDisplay}}>
+            {children}
+        </StateContext.Provider>
+    )
 }
 
 export const useStateContext = () => {

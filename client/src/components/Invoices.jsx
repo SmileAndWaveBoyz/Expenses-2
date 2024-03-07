@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import jsonData from './data.json';
 import { useStateContext } from '../contexts/ContextProvider';
 import Header from '../components/Header';
-import axios from 'axios';
 import axiosClient from '../axios-client';
 
 function Invoices() {
@@ -216,7 +215,7 @@ function Invoices() {
                     </section>
                 </div>
                 :
-                <div class="lds-hourglass"></div>  
+                null
 
                 )
         })

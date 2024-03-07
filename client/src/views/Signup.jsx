@@ -50,7 +50,7 @@ function Signup() {
 
   return (
   <div className='signup'>
-    <div className="row justify-content-md-center align-items-center" style={{ minHeight: "95vh" }}>
+    <div className="row justify-content-center align-items-center" style={{ minHeight: "95vh" }}>
       <form className='login__form col-lg-4 col-md-6 col-sm-8 shadow rounded px-4 pt-4 pb-3'  >
         <h1 className='mb-4'>Signup</h1>
         <div className="row">
@@ -59,7 +59,7 @@ function Signup() {
             <input ref={nameRef} type="text" className="form-control" id="name" placeholder="First name" autoFocus />
             {
               (errors && errors.name) ?
-              <p class="errorMessage">{errors.name}</p>
+              <p className="errorMessage">{errors.name}</p>
               :
               null
             }
@@ -69,7 +69,7 @@ function Signup() {
             <input ref={surnameRef} type="text" className="form-control" id="surname" placeholder="Surname" />
             {
               (errors && errors.surname) ?
-              <p class="errorMessage">{errors.surname}</p>
+              <p className="errorMessage">{errors.surname}</p>
               :
               null
             }
@@ -80,7 +80,7 @@ function Signup() {
           <input ref={emailRef} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
             {
               (errors && errors.email) ?
-              <p class="errorMessage">{errors.email}</p>
+              <p className="errorMessage">{errors.email}</p>
               :
               null
             }
@@ -90,7 +90,7 @@ function Signup() {
           <input ref={passwordRef} type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
             {
               (errors && errors.password) ?
-              <p class="errorMessage">{errors.password}</p>
+              <p className="errorMessage">{errors.password}</p>
               :
               null
             }
